@@ -82,11 +82,28 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
-  background:
-    linear-gradient(rgba(13,13,18,0.72), rgba(13,13,18,0.9)),
-    url('img/cover.jpg') center/cover no-repeat,
-    radial-gradient(circle at 30% 30%, #2b1030, var(--bg));
+  background: var(--bg);
   padding: 2rem 5%;
+  overflow: hidden;
+}
+/* Cover-Bild: komplett sichtbar, beide Personen sichtbar */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: radial-gradient(circle at 50% 40%, #2b1030, var(--bg));
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  background: rgba(13,13,18,0.55);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(2px);
 }
 .hero-kicker {
   text-transform: uppercase;
