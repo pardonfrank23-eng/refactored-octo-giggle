@@ -27,7 +27,7 @@ body::before {
   position: fixed;
   inset: 0;
   background: url('img/cover.jpg') center/cover no-repeat fixed;
-  opacity: 0.18;
+  opacity: 0.32;
   z-index: -1;
 }
 
@@ -88,15 +88,14 @@ body::before {
 .hero {
   min-height: 92vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   text-align: center;
   position: relative;
   background:
-    linear-gradient(rgba(13,13,18,0.72), rgba(13,13,18,0.9)),
-    url('img/cover.jpg') center/cover no-repeat,
-    radial-gradient(circle at 30% 30%, #2b1030, var(--bg));
-  padding: 2rem 5%;
+    linear-gradient(to top, rgba(13,13,18,0.92) 0%, rgba(13,13,18,0.55) 45%, rgba(13,13,18,0.15) 100%),
+    url('img/cover.jpg') center/cover no-repeat;
+  padding: 2rem 5% 3.5rem;
 }
 .hero-kicker {
   text-transform: uppercase;
