@@ -89,11 +89,12 @@ body::before {
   min-height: 92vh;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   position: relative;
   background:
-    linear-gradient(to top, rgba(13,13,18,0.92) 0%, rgba(13,13,18,0.55) 45%, rgba(13,13,18,0.15) 100%),
+    linear-gradient(to top, rgba(13,13,18,0.92) 0%, rgba(13,13,18,0.25) 50%, rgba(13,13,18,0.05) 100%),
+    linear-gradient(to right, rgba(13,13,18,0.6) 0%, rgba(13,13,18,0.0) 50%),
     url('img/cover.jpg') center/cover no-repeat;
   padding: 2rem 5% 3.5rem;
 }
@@ -111,12 +112,12 @@ body::before {
   text-shadow: 0 4px 30px rgba(0,0,0,0.6);
 }
 .hero-text {
-  max-width: 640px;
-  margin: 0 auto 2rem;
+  max-width: 480px;
+  margin: 0 0 2rem;
   color: #d8d8e2;
   font-size: 1.05rem;
 }
-.hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* ---------- Sections ---------- */
 .section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
