@@ -6,6 +6,23 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Mina Stella &amp; SpAwN – Exklusive Welt</title>
 <link rel="stylesheet" href="style.css">
+<script>
+  // Cover-Variante aus URL (?v=1..5), Standard: 1
+  (function(){
+    var v = new URLSearchParams(location.search).get('v') || '1';
+    var map = {
+      '1':'img/cover_v1_original.jpg',
+      '2':'img/cover_v2_zoom_rechts.jpg',
+      '3':'img/cover_v3_zoom_links.jpg',
+      '4':'img/cover_v4_leichtzoom.jpg',
+      '5':'img/cover_v5_blend.jpg'
+    };
+    var url = map[v] || map['1'];
+    var st = document.createElement('style');
+    st.textContent = ".hero{background-image:linear-gradient(to top,rgba(13,13,18,0.92) 0%,rgba(13,13,18,0.25) 50%,rgba(13,13,18,0.05) 100%),linear-gradient(to right,rgba(13,13,18,0.6) 0%,rgba(13,13,18,0.0) 50%),url('"+url+"') !important;}body::before{background-image:url('"+url+"') !important;}";
+    document.head.appendChild(st);
+  })();
+</script>
 </head>
 <body>
 
