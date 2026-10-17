@@ -19,6 +19,16 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  position: relative;
+}
+/* Cover-Bild als durchscheinender Hintergrund fuer die ganze Seite */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('img/cover.jpg') center/cover no-repeat fixed;
+  opacity: 0.18;
+  z-index: -1;
 }
 
 /* ---------- Header ---------- */
@@ -111,7 +121,7 @@ body {
 
 /* ---------- Sections ---------- */
 .section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
-.section.dark { max-width: none; background: var(--bg2); }
+.section.dark { max-width: none; background: rgba(20,20,28,0.88); }
 .section.dark > * { max-width: 1200px; margin-left: auto; margin-right: auto; }
 .section h2 {
   font-size: 2rem;
@@ -128,7 +138,7 @@ body {
 /* ---------- Cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.4rem; }
 .card {
-  background: var(--card);
+  background: rgba(28,28,40,0.92);
   border: 1px solid #2a2a3a;
   border-radius: 16px;
   padding: 1.8rem;
